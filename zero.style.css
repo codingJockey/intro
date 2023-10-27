@@ -81,6 +81,7 @@ button {
 
 /*IntroductioinSectionStartsHere*/
 .introSection {
+  margin: 12px;
   padding: 12px;
   display: flex;
   justify-content: space-evenly;

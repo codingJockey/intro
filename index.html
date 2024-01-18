@@ -8,11 +8,12 @@
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
-  <title>Who'sCodingJockey?</title>
+  <title>Who'sMavinCoder?</title>
 </head>
 
 <body>
-  <!--NavigationSectionEndsHere-->
+  <div class="screen" id="screen">
+    <!--NavigationSectionEndsHere-->
   <div id="NavSection">
     <div><img id="mainLogo" src="resources/minicons/logo.png" alt="Logo"></div>
     <div>
@@ -20,7 +21,7 @@
       <a class="navAnc" href="#skillsHeading">Skills</a>
       <a class="navAnc" href="#projectsHeading">Projects</a>
       <a class="navAnc" href="#followHeading">Follow Me</a>
-      <button id="specialButton">Get in Touch</button>
+      <button onclick="showPopup()" id="specialButton">Get in Touch</button>
     </div>
   </div>
   <!--NavigationSectionEndsHere-->
@@ -39,7 +40,7 @@
     </div>
   </div>
   <!--NavigationSectionEndsHere-->
-
+  
   <!--About-Me&TallentSectionStartsHere-->
   <div id="About-MeAndTallentSection">
     <h1 class="headings" id="About-MeHeading">About Me</h1>
@@ -131,7 +132,38 @@
     <p id="goodBye">Spread some &#10083; in this cruel world.&#128519;</p>
   </div>
   <!--FooterSectionEndsHere-->
+
+  </div>
+
+  <div id="MessageSent" style="visibility: hidden;">
+    <i class="fa-solid fa-envelope-circle-check"></i>Message Sent!</div>
+</div>
+  
+  <div class="contactPopup">
+    
+    <div class="form-container" id="contactPopup">
+      <div>
+        <button onclick="closePopup()" class="close-popup"><i class="fa-solid fa-circle-xmark"></i></button><h1 class="contactHeading"><u>Get in</u> Touch</h1>
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="146bbe59-9d02-47dc-bf4c-fb9937b10cae">
+
+          <input type="text" name="name" placeholder="Your Name Here..." required class="input-fields">
+          <br>
+          <input type="email" name="email" placeholder="Your Email Here..." required class="input-fields">
+          <br>
+          <textarea name="message" placeholder="Your Lovely Words Here..." required class="input-fields"></textarea>
+          <br>
+          <button type="submit" onclick="sentToastNotification()" class="specialButtons sendButton">Send Message</button>
+      </form>
+  </div>
+  <div><span><a href="https://wa.me/919369707041"><button class="contactButtons"><i
+    class="fa-brands fa-whatsapp fa-bounce"></i><br>WhatsApp</button></a></span>
+  <span><a href="mailto:hipravin403@gmail.com"><button class="contactButtons"><i class="fa-solid fa-envelope fa-bounce"></i><br>Gmail</button></a></span>
+   </div>
+
+  </div>
   <script src="script.js"></script>
+  <script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 
 </html>

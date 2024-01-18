@@ -45,6 +45,7 @@ button {
 
 #mainLogo,
 .miniIcons {
+  align-items: center;
   height: 64px;
   width: 64px;
 }
@@ -70,7 +71,7 @@ button {
   padding: 8px 12px;
 }
 
-#specialButton:hover {
+.sendButton:hover,#specialButton:hover {
   background-image: linear-gradient(to top left, red, black);
   border-radius: 18px;
   cursor: pointer;
@@ -120,7 +121,7 @@ button {
   padding: 25px;
 }
 
-#About-MeHeading {
+#About-MeHeading, .contactHeading {
   font-size: 36px;
   border-radius: 50px 50px 0px 0px;
   color: white;
@@ -159,11 +160,11 @@ button {
   color: white;
 }
 
-.fa-brands {
+.fa-brands,.fa-solid {
   font-size: 48px;
 }
 
-.followButtons {
+.followButtons, .contactButtons {
   margin: 16px;
   padding: 12px;
   border-radius: 12px;
@@ -171,9 +172,12 @@ button {
   background: #EB144C;
   box-shadow: -9px -9px 18px #5E080E, 9px 9px 18px #FF208A;
   font-size: 0px;
+}
+.followButtons{
   transition: 0.5s;
 }
 
+.contactButtons:hover,
 .followButtons:hover {
   cursor: pointer;
   font-size: 12px;
@@ -187,6 +191,69 @@ button {
 
 /*FooterSectionEndsHere*/
 
+/*ContactPageStartsHere*/
+#contactPopup,.form-container{
+  margin: 18px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding:24px;
+  border-radius: 24px;
+  width:60vw;
+  /* height:275px; */
+  background: linear-gradient(#ef887a,#ffd6e1);
+  visibility: hidden;
+}
+
+
+.input-fields{
+  width:200px;
+  margin:10px;
+  padding:10px;
+  border-style: none;
+  border-radius: 20px;    
+}
+.sendButton{
+  background-image: linear-gradient(to bottom right, red, black);
+  padding:18px;
+  margin:18px;
+  border-style: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+}
+.close-popup{
+  background-color: transparent;
+  top:2%;
+  right:2%;
+  font-size: 24px;
+  position: absolute;
+}
+.close-popup:hover{
+  cursor: pointer;
+}
+#MessageSent {
+  float: inline-end;
+  display: flex;
+
+  padding: 12px;
+  background: white;
+  border-left: 4px solid #5E5EFF;
+  color: #5E5EFF;
+  height: 28px;
+  position: absolute;
+  right: 12px;
+  border-radius: 12px;
+  align-items: center;
+
+}
+/*ContactPageEndsHere*/
+
+
 /*MEDIA_QUERIES*/
 @media (max-width: 640px) {
   .navAnc {
@@ -195,6 +262,9 @@ button {
 
   .introSection {
     flex-direction: column-reverse;
+  }
+  .form-container{
+    flex-direction: column;
   }
 }
 

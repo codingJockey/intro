@@ -236,21 +236,6 @@ button {
 .close-popup:hover{
   cursor: pointer;
 }
-#MessageSent {
-  float: inline-end;
-  display: flex;
-
-  padding: 12px;
-  background: white;
-  border-left: 4px solid #5E5EFF;
-  color: #5E5EFF;
-  height: 28px;
-  position: absolute;
-  right: 12px;
-  border-radius: 12px;
-  align-items: center;
-
-}
 /*ContactPageEndsHere*/
 
 
